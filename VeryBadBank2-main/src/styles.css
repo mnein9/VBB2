@@ -1,0 +1,31 @@
+/* src/styles.css */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar, .card-header {
+    background-color: #004571;
+    color: white;
+  }
+  
+  .btn-primary, .nav-link:hover {
+    background-color: #ff681f;
+    border-color: #ff681f;
+  }
+  
+  .card {
+    background-color: #fdfcfd;
+  }
+  
+  .card-text {
+    color: #000000;
+  }
+  
+  footer {
+    background-color: #efefef;
+  }
+  
+  .nav-item .nav-link.active {
+    color: #ff681f !important;
+  }
+  

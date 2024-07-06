@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://mnein09:eAmqAj7AMaNfP9vS@verybadbank.zjwvx8r.mongodb.net/verybadbank?retryWrites=true&w=majority",
+  "JWT_SECRET": "RafaSecretKey",
+  "PORT": "5001"
+}
+  
