@@ -41,7 +41,7 @@ const CreateAccount = () => {
     e.preventDefault();
     if (validateForm()) {
       const { name, email, password } = formData;
-      axios.post('http://localhost:5001/api/users/create-account', { name, email, password })
+      axios.post('https://vbb2.onrender.com/api/users/create-account', { name, email, password })
         .then((response) => {
           setShowSuccessModal(true);
           setShowAddAnother(true);

@@ -12,7 +12,7 @@ const AllData = () => {
   }, []);
 
   const getData = () => {
-    axios.get('http://localhost:5001/api/users/profile', {headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}})
+    axios.get('https://vbb2.onrender.com/api/users/profile', {headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}})
         //.then(response => response.json())
         .then(data => {setUser(data.data); console.log("data is: " + JSON.stringify(data));})
         .catch(error => console.error('Failed to retrieve user submissions:', error));

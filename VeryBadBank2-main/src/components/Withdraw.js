@@ -18,7 +18,7 @@ const Withdraw = () => {
   }, []);
 
   const getCurrentBalance = (email) => {
-    axios.get('https://vbb20-eb34e9f7291b.herokuapp.com/', { params: { email },headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}} )
+    axios.get('https://vbb2.onrender.com/api/users/get_balance', { params: { email },headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}} )
       .then(response => setCurrentBalance(response.data.balance))
       .catch(error => console.log(error));
   };
@@ -39,7 +39,7 @@ const Withdraw = () => {
       return;
     }
     console.log("token value is " + localStorage.getItem('token'))
-    axios.post('https://vbb20-eb34e9f7291b.herokuapp.com/', { email: currentUserEmail, amount: amount},{headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}})
+    axios.post('https://vbb2.onrender.com/api/users/withdraw', { email: currentUserEmail, amount: amount},{headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}})
       .then(() => {
         setCurrentBalance(prevBalance => prevBalance - amount);
         setShowSuccessMessage(true);

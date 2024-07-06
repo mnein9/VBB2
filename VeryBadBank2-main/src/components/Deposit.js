@@ -19,7 +19,7 @@ const Deposit = () => {
 
   const getCurrentBalance = (email) => {
     console.log("token value is " + localStorage.getItem('token'))
-    axios.get('http://localhost:5001/api/users/get_balance', { params: { email },headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}} )
+    axios.get('https://vbb2.onrender.com/api/users/get_balance', { params: { email },headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}} )
       .then(response => setCurrentBalance(response.data.balance))
       .catch(error => console.log(error));
   };
@@ -36,7 +36,7 @@ const Deposit = () => {
       return;
     }
     console.log("token value is " + localStorage.getItem('token'))
-    axios.post('http://localhost:5001/api/users/deposit', { email: currentUserEmail, amount: amount},{headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}})
+    axios.post('https://vbb2.onrender.com/api/users/deposit', { email: currentUserEmail, amount: amount},{headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}})
       .then(() => {
         setCurrentBalance(prevBalance => prevBalance + amount);
         setShowSuccessMessage(true);

@@ -21,6 +21,9 @@ const Navbar = () => {
   const isLoggedIn = !!localStorage.getItem('token');
   const userEmail = localStorage.getItem('userEmail');
 
+  console.log('isLoggedIn:', isLoggedIn);
+  console.log('userEmail:', userEmail);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#004571' }}>
       <a className="navbar-brand" href="/">Very Bad Bank</a>
